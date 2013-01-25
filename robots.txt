@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /harminghumans
+Allow: /obeyhumans
+Disallow: /harmself
+
+Allow: /seethingsyoupeoplewouldntbelieve
+

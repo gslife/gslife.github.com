@@ -1,0 +1,38 @@
+.wrap {
+	width: 800px;
+	margin:100px auto;
+	position: relative}
+
+article {
+	font-family: Helvetica, Arial, sans-serif;
+	-webkit-transform: skewY(-10deg);
+	-moz-transform: skewY(-10deg);
+	position:absolute;
+	top: 0;
+	left: 0;}
+
+h2 {
+	font-size: 72px;
+	margin: 0 0 20px;
+	line-height: 1;}
+
+.top {
+	z-index: 100;}
+
+.middle {
+	z-index:50;
+	top:120px;
+	-webkit-transform: scale(.90) skewY(-10deg);
+	-moz-transform: scale(.90) skewY(-10deg);
+	text-shadow:0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+.bottom {	
+	z-index:0;
+	top:250px;
+	-webkit-transform: scale(.80) skewY(-10deg);
+	-moz-transform: scale(.80) skewY(-10deg);
+	text-shadow:0 0 5px rgba(0, 0, 0, 0.25);}
+	
+.middle, .bottom {
+	color:rgba(0,0,0,0);}

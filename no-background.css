@@ -1,0 +1,224 @@
+@charset "UTF-8";
+
+/*CSS Reset*/
+{
+	margin: 0;
+	padding: 0;
+}
+
+/* maxvoltar.com/archive/-webkit-font-smoothing */
+html { -webkit-font-smoothing: antialiased; }
+
+header, footer, aside, nav, article {
+	display: block;
+}
+
+body {
+	margin: 0;
+	font: 16px/22px Georgia, "Times New Roman", serif;
+	color: #444;
+	font-style:italic;
+ /* background: #000 url(images/background.jpg) top left fixed no-repeat; */
+}
+
+img {  
+	border-style: none;
+}
+
+#logo {
+	margin:65px 75px;
+	position: fixed;
+}
+
+nav {
+	position: fixed;
+	width: 108px;
+	top: 215px;
+}
+
+nav ul li {
+	list-style: none;
+	line-height: 50px;
+}
+
+	nav ul li a {
+		display: block;
+		width: 140px;
+		text-decoration: none;
+		color: #000;
+		text-align: center;
+		opacity:0.4;
+		filter:alpha(opacity=40);
+		letter-spacing: 1px;
+
+	}
+	
+		nav ul li a:hover {
+			color: #000;
+			background:url(images/hover.jpg) no-repeat 20px center;
+	}
+
+		nav ul li.selected a {
+			color: #777;
+	}
+
+		nav ul li.current a {
+			background: url(images/current-page.png) no-repeat center;
+			color: #000;
+			opacity:0.6;
+			filter:alpha(opacity=60);
+	}
+	
+		nav ul li.currentwd a {
+			background: url(images/current-pagewd.png) no-repeat center;
+			color: #000;
+			opacity:0.6;
+			filter:alpha(opacity=60);
+	}
+	
+		nav ul li.turnon a {
+			font-size: 11px;
+			line-height: 85px;
+			visibility:visible;
+		}
+		
+		nav ul li.turnoff a {
+			font-size: 11px;
+			line-height: 85px;
+			visibility:hidden;
+		}
+		
+#divider {
+	background: url(images/gslifeplayng_06.png) no-repeat;
+	position:fixed;
+	top: 120px;
+	width: 10px;
+	height: 450px;
+	left: 230px;
+	opacity:0.6;
+	filter:alpha(opacity=60);
+}
+
+section {
+	display: block;
+	width:450px;
+	position:absolute;
+	left:275px;
+	top: 100px;
+/*	text-transform: lowercase; */
+	}
+	
+#text {
+	top:180px;
+}
+	
+section h1 {
+	margin: 0;
+	padding:0;
+	font-weight: bold;
+	text-rendering: optimizeLegibility;
+}
+	
+section p {
+	font-style: normal;
+	color: #333;
+	font-size: 0.9em;
+}
+	
+
+section p.featured {
+	margin-top:-10px;
+}
+	
+section p a {
+	text-decoration: none;
+	color: #888;}
+	
+section p a.tel {color:#333}
+
+ul#port img {
+	border: 3px solid #ddd;
+	margin: 4px;}
+
+section ul#oops {
+	opacity:0.8;
+	filter:alpha(opacity=80);}
+
+section ul#oops li a {
+	text-decoration: none;
+	color: #555;}
+
+section ul#port {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	width: 600px;}
+
+section ul#port li {
+	left: -5px;
+	top: -5px;
+	position: relative;}
+
+section ul#port li ul {	
+	list-style: none;
+	position: absolute;
+	left: 380px;
+	top: 100px;
+	display: none;
+	opacity:0.6;
+	filter:alpha(opacity=60);
+	font-size: 14px;
+	line-height: 110%;
+	}
+	
+section ul#port li:hover ul {
+	display: block;}
+	
+ul strong {
+	font-size: 16px;}
+	
+footer {
+	font: .6em/12px Georgia, "Times New Roman", serif;
+	font-style:italic;
+	position: fixed;
+	left: 10px;
+	bottom: 0px;
+	padding: 10px;
+	opacity:0.3;
+	filter:alpha(opacity=30);
+	}
+
+footer span { display:none;}
+
+footer a {
+	color: #000;
+	text-decoration: none;
+	border-bottom:1px dotted;}
+	
+#lightbox{	position: absolute;	left: 0; width: 100%; z-index: 100; text-align: center; line-height: 0;}
+#lightbox img{ width: auto; height: auto;}
+#lightbox a img{ border: none; }
+
+#outerImageContainer{ position: relative; background-color: #fff; width: 250px; height: 250px; margin: 0 auto; }
+#imageContainer{ padding: 10px; }
+
+#loading{ position: absolute; top: 40%; left: 0%; height: 25%; width: 100%; text-align: center; line-height: 0; }
+#hoverNav{ position: absolute; top: 0; left: 0; height: 100%; width: 100%; z-index: 10; }
+#imageContainer>#hoverNav{ left: 0;}
+#hoverNav a{ outline: none;}
+
+#prevLink, #nextLink{ width: 49%; height: 100%; background-image: url(data:image/gif;base64,AAAA); /* Trick IE into showing hover */ display: block; }
+#prevLink { left: 0; float: left;}
+#nextLink { right: 0; float: right;}
+#prevLink:hover, #prevLink:visited:hover { background: url(../images/prevlabel.gif) left 15% no-repeat; }
+#nextLink:hover, #nextLink:visited:hover { background: url(../images/nextlabel.gif) right 15% no-repeat; }
+
+#imageDataContainer{ font: 10px Verdana, Helvetica, sans-serif; background-color: #fff; margin: 0 auto; line-height: 1.4em; overflow: auto; width: 100%	; }
+
+#imageData{	padding:0 10px; color: #666; }
+#imageData #imageDetails{ width: 70%; float: left; text-align: left; }	
+#imageData #caption{ font-weight: bold;	}
+#imageData #numberDisplay{ display: block; clear: left; padding-bottom: 1.0em;	}			
+#imageData #bottomNavClose{ width: 66px; float: right;  padding-bottom: 0.7em; outline: none;}	 	
+
+#overlay{ position: absolute; top: 0; left: 0; z-index: 90; width: 100%; height: 500px; background-color: #000; }
