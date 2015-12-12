@@ -5,7 +5,7 @@
 /* TEAM */
   Gideon Slife
   Twitter: @gideonslife
-  Location: Newark, DE
+  Location: Collegeville, PA
 
 /* THANKS */
   Names (& URL): html5boilerplate.com
