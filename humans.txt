@@ -5,15 +5,13 @@
 /* TEAM */
   Gideon Slife
   Twitter: @gideonslife
-  Location: Collegeville, PA
+  Location: Denver, CO
 
 /* THANKS */
   Names (& URL): html5boilerplate.com
 
 /* SITE */
   Standards: HTML5, CSS3
-  Components: Modernizr, jQuery
-  Software:
   
 
                                     
