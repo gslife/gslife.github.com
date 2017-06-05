@@ -478,6 +478,9 @@ a {
 	-webkit-transition: all .3s linear;
 	-moz-transition: all .3s linear;
 	-o-transition: all .3s linear;
+	color: #286671;
+	border-bottom: 1px solid;
+	text-decoration: none;
 }
 
 header {
