@@ -478,9 +478,16 @@ a {
 	-webkit-transition: all .3s linear;
 	-moz-transition: all .3s linear;
 	-o-transition: all .3s linear;
+}
+
+p a {
 	color: #286671;
 	border-bottom: 1px solid;
 	text-decoration: none;
+}
+
+p a:hover {
+	border-bottom: 1px solid transparent;
 }
 
 header {
