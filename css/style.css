@@ -11,7 +11,7 @@
 }
 
 html {
-  font-family: sans-serif; /* 1 */
+  font-family: 'Museo300-Regular', sans-serif; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
@@ -464,6 +464,16 @@ textarea {
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Museo300-Regular';
+    src: url('../museo/Museo300-Regular-webfont.woff2') format('woff2'),
+         url('../museo/Museo300-Regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
 a {
 	-webkit-transition: all .3s linear;
 	-moz-transition: all .3s linear;
@@ -472,7 +482,7 @@ a {
 
 header {
 	height: 15em;
-	background: #286671 url("../images/header.png");
+	background: #286671;
 }
 
 header h1 {

@@ -23,12 +23,9 @@
  */
 
 @font-face {
-    font-family: 'MuseoSlab500';
-    src: url('Museo_Slab_500-webfont.eot');
-    src: url('Museo_Slab_500-webfont.eot?iefix') format('eot'),
-         url('Museo_Slab_500-webfont.woff') format('woff'),
-         url('Museo_Slab_500-webfont.ttf') format('truetype'),
-         url('Museo_Slab_500-webfont.svg#webfontyumMOUTD') format('svg');
+    font-family: 'Museo300-Regular';
+    src: url('Museo300-Regular-webfont.woff2') format('woff2'),
+         url('Museo300-Regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
