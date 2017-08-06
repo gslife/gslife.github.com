@@ -835,6 +835,10 @@ main p {
 		width: 30%;
 	}
 	
+	.work-wrap.two-col img {
+		width: 48%;
+	}
+	
 	.lost .work-wrap img {
 		width: 100%;
 	}
