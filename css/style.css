@@ -453,6 +453,7 @@ textarea {
  * Author: Gideon Slife gideonslife.com
  */
 
+/*
 @font-face {
     font-family: 'BebasRegular';
     src: url('../bebas/BEBAS___-webfont.eot');
@@ -470,15 +471,14 @@ textarea {
          url('../museo/Museo300-Regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
-
+*/
 
 a {
 	-webkit-transition: all .3s linear;
 	-moz-transition: all .3s linear;
 	-o-transition: all .3s linear;
-}/Volumes/Ocarina/GitHub/gslife.github.com/css/style.css
+}
 
 p a {
 	color: #286671;
@@ -525,7 +525,6 @@ header nav ul {
 
 header nav li {
 	float: left;
-	font-family: 'BebasRegular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	letter-spacing: 1px;
 }
 
