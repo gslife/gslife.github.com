@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script src="d20.js"></script>
+    <script type="text/javascript">
+    function roll() {
+        // Roll for temperature, wind, and rain
+        var weather = d20.roll('3d20', true);
+        var tempdiffroll = d20.roll(4);
+
+        // roll to see if there is an encounter
+        var encounterroll = d20.roll(20);
+
+        // Temperature table
+        if (weather[0] >= 1 && weather[0] <= 14) {
+            document.getElementById("temperature").innerHTML = "normal";
+        } else if (weather[0] >= 15 && weather[0] <= 17) {
+            document.getElementById("temperature").innerHTML = "is " + tempdiffroll + "0&deg; hotter than normal";
+        } else {
+            document.getElementById("temperature").innerHTML = "is " + tempdiffroll + "0&deg; colder than normal";
+        }
+
+        // wind table
+        if (weather[1] >= 1 && weather[1] <= 14) {
+            document.getElementById("wind").innerHTML = "There is no wind.";
+        } else if (weather[1] >= 15 && weather[1] <= 17) {
+            document.getElementById("wind").innerHTML = "The wind is light.";
+        } else {
+            document.getElementById("wind").innerHTML = "The wind is strong.";
+        }
+
+        // rain table
+        if (weather[2] >= 1 && weather[2] <= 14) {
+            document.getElementById("rain").innerHTML = "There is no rain.";
+        } else if (weather[2] >= 15 && weather[2] <= 17) {
+            document.getElementById("rain").innerHTML = "The rain is light.";
+        } else {
+            document.getElementById("rain").innerHTML = "The rain is heavy.";
+        }
+
+        if (encounterroll >= 17 && encounterroll <= 20) {
+            var monster = d20.roll(12);
+            if (monster >= 1 && monster <= 2) {
+                document.getElementById("encounter").innerHTML = d20.roll('1d8+2') + " stirges";
+            } else if (monster >= 3 && monster <= 4) {
+                document.getElementById("encounter").innerHTML = "an ogre";
+            } else if (monster >= 5 && monster <= 6) {
+                document.getElementById("encounter").innerHTML = d20.roll('1d6+3') + " goblins";
+            } else if (monster >= 7 && monster <= 8) {
+                document.getElementById("encounter").innerHTML = d20.roll('1d4+2') + " hobgoblins";
+            } else if (monster >= 9 && monster <= 10) {
+                document.getElementById("encounter").innerHTML = d20.roll('1d4+2') + " orcs";
+            } else if (monster == 11) {
+                document.getElementById("encounter").innerHTML = d20.roll('1d4+2') + " wolves";
+            } else {
+                document.getElementById("encounter").innerHTML = "an owlbear";
+            } 
+        } else {
+            document.getElementById("encounter").innerHTML = "nothing";
+        }
+        console.log("encounter" + encounterroll);
+        console.log("monster" + monster);
+    }
+    </script>
+</head>
+
+<body onload="roll()">
+    <p>The temperature is <span id="temperature"></span>.<br><span id="wind"></span><br><span id="rain"></span><br>You encounter <span id="encounter"></span>.</p>
+</body>
+
+</html>
