@@ -23,18 +23,18 @@
         }
 
         // wind table
-        if (weather[1] >= 1 && weather[1] <= 14) {
+        if (weather[1] >= 1 && weather[1] <= 17) {
             document.getElementById("wind").innerHTML = "There is no wind.";
-        } else if (weather[1] >= 15 && weather[1] <= 17) {
+        } else if (weather[1] >= 18 && weather[1] <= 19) {
             document.getElementById("wind").innerHTML = "The wind is light.";
         } else {
             document.getElementById("wind").innerHTML = "The wind is strong.";
         }
 
         // rain table
-        if (weather[2] >= 1 && weather[2] <= 14) {
+        if (weather[2] >= 1 && weather[2] <= 17) {
             document.getElementById("rain").innerHTML = "There is no rain.";
-        } else if (weather[2] >= 15 && weather[2] <= 17) {
+        } else if (weather[2] >= 18 && weather[2] <= 19) {
             document.getElementById("rain").innerHTML = "The rain is light.";
         } else {
             document.getElementById("rain").innerHTML = "The rain is heavy.";
@@ -60,6 +60,8 @@
         } else {
             document.getElementById("encounter").innerHTML = "nothing";
         }
+        console.log("weather" + weather);
+        console.log("tempdiffroll" + tempdiffroll);
         console.log("encounter" + encounterroll);
         console.log("monster" + monster);
     }
