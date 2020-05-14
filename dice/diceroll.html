@@ -5,11 +5,42 @@
     <title></title>
     <script src="d20.js"></script>
     <script type="text/javascript">
+    var gen_data = {};
+
+    gen_data['main'] = [
+        'The weather is {weather}, the temperature is {temperature}, and the wind is {wind}. You have a {difficulty} encounter, number {encounternum} at {time}.'
+    ];
+    gen_data['weather'] = [
+        '1', 'Blizzard/Thunderstorm'
+    ];
+    gen_data['race'] = {
+        '1-3': 'human',
+        '4-5': 'dwarf',
+        '6': 'elf'
+    };
+    gen_data['armor'] = {
+        '01-50': 'leather armor',
+        '51-90': 'chainmail',
+        '91-00': 'plate armor'
+    };
+    gen_data['weapon'] = [
+        '{melee_weapon}',
+        '{melee_weapon} and a shield',
+        'twin blades',
+        '{ranged_weapon}'
+    ];
+    gen_data['melee_weapon'] = [
+        'a battleaxe', 'a mace', 'a spear', 'a sword'
+    ];
+    gen_data['ranged_weapon'] = [
+        'a longbow and arrows', 'a heavy crossbow'
+    ];
+
     function roll() {
         // Roll for temperature, wind, and rain
-        var weather = d20.roll('3d20', true);
-        var tempdiffroll = d20.roll(4);
-
+        var weather = d20.roll('2d20', true);
+        var tempdiffroll = d20.roll(40);
+        var weatherrobust = d20.roll(100);
         // roll to see if there is an encounter
         var encounterroll = d20.roll(20);
 
@@ -17,9 +48,9 @@
         if (weather[0] >= 1 && weather[0] <= 14) {
             document.getElementById("temperature").innerHTML = "normal";
         } else if (weather[0] >= 15 && weather[0] <= 17) {
-            document.getElementById("temperature").innerHTML = "is " + tempdiffroll + "0&deg; hotter than normal";
+            document.getElementById("temperature").innerHTML = tempdiffroll + "&deg; hotter than normal";
         } else {
-            document.getElementById("temperature").innerHTML = "is " + tempdiffroll + "0&deg; colder than normal";
+            document.getElementById("temperature").innerHTML = tempdiffroll + "&deg; colder than normal";
         }
 
         // wind table
@@ -31,32 +62,46 @@
             document.getElementById("wind").innerHTML = "The wind is strong.";
         }
 
-        // rain table
-        if (weather[2] >= 1 && weather[2] <= 17) {
-            document.getElementById("rain").innerHTML = "There is no rain.";
-        } else if (weather[2] >= 18 && weather[2] <= 19) {
-            document.getElementById("rain").innerHTML = "The rain is light.";
-        } else {
-            document.getElementById("rain").innerHTML = "The rain is heavy.";
-        }
+        // rain table - removed for the more extensive weather table
+        // if (weather[2] >= 1 && weather[2] <= 17) {
+        //     document.getElementById("rain").innerHTML = "There is no rain.";
+        // } else if (weather[2] >= 18 && weather[2] <= 19) {
+        //     document.getElementById("rain").innerHTML = "The rain is light.";
+        // } else {
+        //     document.getElementById("rain").innerHTML = "The rain is heavy.";
+        // }
+
+        document.getElementById("weatherrobust").innerHTML = weatherrobust;
 
         if (encounterroll >= 17 && encounterroll <= 20) {
-            var monster = d20.roll(12);
-            if (monster >= 1 && monster <= 2) {
-                document.getElementById("encounter").innerHTML = d20.roll('1d8+2') + " stirges";
-            } else if (monster >= 3 && monster <= 4) {
-                document.getElementById("encounter").innerHTML = "an ogre";
-            } else if (monster >= 5 && monster <= 6) {
-                document.getElementById("encounter").innerHTML = d20.roll('1d6+3') + " goblins";
-            } else if (monster >= 7 && monster <= 8) {
-                document.getElementById("encounter").innerHTML = d20.roll('1d4+2') + " hobgoblins";
-            } else if (monster >= 9 && monster <= 10) {
-                document.getElementById("encounter").innerHTML = d20.roll('1d4+2') + " orcs";
-            } else if (monster == 11) {
-                document.getElementById("encounter").innerHTML = d20.roll('1d4+2') + " wolves";
+            var difficulty = d20.roll(20);
+            var encounter = d20.roll(10);
+            var time = d20.roll(3);
+            if (difficulty >= 1 && difficulty <= 6) {
+                document.getElementById("encounter").innerHTML = "easy encounter number " + encounter + " at " + time;
+            } else if (difficulty >= 7 && difficulty <= 13) {
+                document.getElementById("encounter").innerHTML = "medium encounter number " + encounter + " at " + time;
+            } else if (difficulty >= 14 && difficulty <= 19) {
+                document.getElementById("encounter").innerHTML = "hard encounter number " + encounter + " at " + time;
             } else {
-                document.getElementById("encounter").innerHTML = "an owlbear";
-            } 
+                document.getElementById("encounter").innerHTML = "deadly encounter number " + encounter + " at " + time;
+            }
+            // Removed in favor of a more robust encounter chart.
+            // if (monster >= 1 && monster <= 2) {
+            //     document.getElementById("encounter").innerHTML = d20.roll('1d8+2') + " stirges";
+            // } else if (monster >= 3 && monster <= 4) {
+            //     document.getElementById("encounter").innerHTML = "an ogre";
+            // } else if (monster >= 5 && monster <= 6) {
+            //     document.getElementById("encounter").innerHTML = d20.roll('1d6+3') + " goblins";
+            // } else if (monster >= 7 && monster <= 8) {
+            //     document.getElementById("encounter").innerHTML = d20.roll('1d4+2') + " hobgoblins";
+            // } else if (monster >= 9 && monster <= 10) {
+            //     document.getElementById("encounter").innerHTML = d20.roll('1d4+2') + " orcs";
+            // } else if (monster == 11) {
+            //     document.getElementById("encounter").innerHTML = d20.roll('1d4+2') + " wolves";
+            // } else {
+            //     document.getElementById("encounter").innerHTML = "an owlbear";
+            // }
         } else {
             document.getElementById("encounter").innerHTML = "nothing";
         }
@@ -66,10 +111,81 @@
         console.log("monster" + monster);
     }
     </script>
+    <style type="text/css">
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    table tr:nth-child(2n) {
+        background: #ddd;
+    }
+
+    table th,
+    table td {
+        border-top: 1px solid #ccc;
+        border-left: 1px solid #ccc;
+        padding: 5px;
+    }
+    </style>
 </head>
 
 <body onload="roll()">
-    <p>The temperature is <span id="temperature"></span>.<br><span id="wind"></span><br><span id="rain"></span><br>You encounter <span id="encounter"></span>.</p>
+    <p><span id="weatherrobust"></span><br>The temperature is <span id="temperature"></span>.<br><span id="wind"></span><br>You encounter <span id="encounter"></span>. <a href="https://donjon.bin.sh/5e/random/#type=encounter" target="_blank">Figure it out here</a>.</p>
+    <h2>Key</h2>
+    <table>
+        <tr>
+            <th colspan="2">Winter</th>
+            <th colspan="2">Spring</th>
+            <th colspan="2">Summer</th>
+            <th colspan="2">Fall</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Blizzard/Thunderstorm</td>
+            <td>1-2</td>
+            <td>Thunderstorm</td>
+            <td>1</td>
+            <td>Thunderstorm</td>
+            <td>1-2</td>
+            <td>Thunderstorm</td>
+        </tr>
+        <tr>
+            <td>2-20</td>
+            <td>Snow/Rain</td>
+            <td>3-5</td>
+            <td>Heavy Rain</td>
+            <td>2-5</td>
+            <td>Rain</td>
+            <td>3-10</td>
+            <td>Snow/Rain</td>
+        </tr>
+        <tr>
+            <td>21-30</td>
+            <td>Freezing Cold</td>
+            <td>6-20</td>
+            <td>Rain</td>
+            <td>6-30</td>
+            <td>Light Clouds</td>
+            <td>10-20</td>
+            <td>Heavy Clouds</td>
+        </tr>
+        <tr>
+            <td>31-40</td>
+            <td>Heavy Clouds</td>
+            <td>21-50</td>
+            <td>Light Clouds</td>
+            <td>31-80</td>
+            <td>Clear Skies</td>
+            <td>21-50</td>
+            <td>Light Clouds</td>
+        </tr>
+
+        <tr>
+            <td>100</td>
+            <td colspan="7">Strange Phenomena</td>
+        </tr>
+    </table>
 </body>
 
 </html>
