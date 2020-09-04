@@ -726,6 +726,7 @@ main p {
 	margin: 0 auto 1em;
 	max-height: 90vh;
 	max-width: 100%;
+	align-self: center;
 }
 
 .portfolio figure {
