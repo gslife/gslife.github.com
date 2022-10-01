@@ -9,6 +9,9 @@
   - [I. The Cottage of Lost Play](#i-the-cottage-of-lost-play)
   - [II. The Music of the Ainur](#ii-the-music-of-the-ainur)
   - [III. The Coming of the Valar and the Building of Valinor](#iii-the-coming-of-the-valar-and-the-building-of-valinor)
+  - [IV. The Chaining of Melko](#iv-the-chaining-of-melko)
+  - [V. The Coming of the Elves and the Making of Kôr](#v-the-coming-of-the-elves-and-the-making-of-kôr)
+  - [VI. The Theft of Melko and the Darkening of Valinor](#vi-the-theft-of-melko-and-the-darkening-of-valinor)
 
 ## Schedule
 
@@ -62,3 +65,25 @@ Later that same night, Rúmil tells the story of the Valar and Valinor. We get a
 Air exists in three levels: **Vaitya**, the thick air outside the world, **Ilwë**, the blue air around stars, and **Vilna**, the thin air birds can fly in. Light behaves like water at this point, floating around the world and falling like rain. While this is not explicitly noted in the published _Silmarillion_, the Valar do collect light into vats at one point, implying that Tolkien was continuing to think of light as a liquid substance early in the world's existence.  
 
 We then get a much more detailed origin of the two trees, as well as very detailed dwelling places of the Valar. Most notably, we get what seems to be a heaven, purgatory, and hell under Fui's description. Christopher finished this chapter by showing the differences between these writings and the published _Silmarillion_, as well as providing us with two maps of the world drawn by Tolkien. One of these has Tolkien envisioning the world as a viking boat! 
+
+## IV. The Chaining of Melko
+
+Eriol hearing the piping of Tinfang Warble gives us the first reference of Luthien (he is her brother), Thingol, and Melien. These characters are in-name only and we don't get their stories except for a loose reference that Tinfang is half-fey (or Ainur) and half-gnome (or elf).
+
+Eriol desires limpë, the drink that will quench the desire that Tinfang's piping has created in him. He meets Meril-i-Turinqui, who denies him limpë until he better understands the plight and history of elvenkind. Here Tolkien sharply draws the distinction between elves and humans—elves are not without desire as is sometimes thought. Theirs are "deeper and more keen". 
+
+She tells the story of Melko bringing his powers against the world, for such the Valar, in anger, capture and chain him. We get a *lot* of dialogue between the Valar. As Christopher notes, the difference between this and _The Silmarillion_ is that the Valar chain Melkor when the elves awake, not simply because he's ruining their work. 
+
+## V. The Coming of the Elves and the Making of Kôr
+
+This is the early version of the elves journeying to Valinor, but the focus of attention is very different. Notice that this chapter is almost entirely about infighting between Valar and how they set land in certain places, and not about the elvish tribes. The focus in the published version is centered more about the tribes of elves and how their languages and cultures become distinct. 
+
+However, the seeds of future stories are laid. We get a reference to the "lust of more knowing" from the Noldoli, and our first reference to Fëanor and the Silmarilli.
+
+In Christopher's notes, he calls out an absence: as Melko is missing, he does not capture elves in Cuivienen. The orcs or goblins don't exist as a mirrored antagonist race. I'm not sure why Christopher puts the poems about Kôr in chapter 1 since this is clearly the more relevant place for them. 
+
+## VI. The Theft of Melko and the Darkening of Valinor
+
+Eriol returns to the Cottage of Lost Play (without limpë) and learns how Melko, unchained and living now in Valinor, begin to cast dissent among the elves. During a feast, Melko kills an elf and steals all the jewels of the Noldoli. Manwë gives a terrible chiding speech to the elves (compare to Manwë later and see how Tolkien decides to give Manwë near-impeccable wisdom). With this speech, Fëanor's rebellion seems more justified.
+
+The Valar, quite childishly, kill the messenger of Melko, something even Gandalf later refuses to do to the Mouth of Sauron. Melko meets Ungoliant, who has a lot of very cool names (Gloomweaver, anyone?). While the Valar and elves are in an uproar over the murder and theft, Melko and Ungoliant kill the two trees, and Melko escapes to the north with the three silmarils.
