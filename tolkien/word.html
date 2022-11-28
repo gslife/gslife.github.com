@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 2rem;
+            background: seashell;
+            color: #333;
+            text-align: center;
+        }
+
+        body p {
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Your word of the year is:</h1>
+    <p class="word">Word</p>
+    <h1>Your character of the year is:</h1>
+    <p class="character"></p>
+    <script>
+    const words = ['eucatastrophe','philology','shire','westmarch'];
+    const characters = ['Frodo','Gandalf','Samwise Gamgee']
+    let word = words[Math.floor(Math.random()*words.length)];
+    let character = characters[Math.floor(Math.random()*characters.length)];
+    document.querySelector('.word').innerHTML = word;
+    document.querySelector('.character').innerHTML = character;
+    </script>
+    
+</body>
+</html>
