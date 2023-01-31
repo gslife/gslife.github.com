@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <div id='timeline-embed' style="width: 100%; height: 600px"></div>
+    <div id='timeline-embed' style="width: 100%; height: 100vh"></div>
     <!-- Create a timeline -->
     <script type="text/javascript">
         // JSON
@@ -113,7 +113,7 @@
                     "text": {
                         "headline": "Vardamir Nólimon abdicates the Sceptre.<br> Tar-Amandil becomes the third King of Númenor.",
                         "text": "Instead of ascending the throne, Vardamir immediately passed on the Sceptre to his eldest son Amandil. Vardamir is officially counted as the second King of Númenor, being deemed to have ruled nominally for a single year."
-                        
+
                     }
                 },
                 {
@@ -122,7 +122,7 @@
                     },
                     "text": {
                         "headline": "Sauron returns to Middle-earth in the East",
-                        
+
                     }
                 }
             ],
@@ -135,7 +135,7 @@
                         "year": "442"
                     },
                     "text": {
-                        "text": "Rule of Elros Tar-Minyatur, First king of Númenor",
+                        "headline": "Rule of Elros Tar-Minyatur, First king of Númenor",
                     }
                 },
                 {
@@ -146,18 +146,197 @@
                         "year": "590"
                     },
                     "text": {
-                        "text": "Rule of Tar-Amandil, third king of Númenor",
+                        "headline": "Rule of Tar-Amandil, third king of Númenor",
+                    }
+                },
+                {
+                    "start_date": {
+                        "year": "590"
+                    },
+                    "end_date": {
+                        "year": "740"
+                    },
+                    "text": {
+                        "headline": "Rule of Tar-Elendil, fourth king of Númenor",
+                    }
+                },
+                {
+                    "start_date": {
+                        "year": "740"
+                    },
+                    "end_date": {
+                        "year": "883"
+                    },
+                    "text": {
+                        "headline": "Rule of Tar-Meneldur, fifth king of Númenor",
+                    }
+                },
+                {
+                    "start_date": {
+                        "year": "883"
+                    },
+                    "end_date": {
+                        "year": "1075"
+                    },
+                    "text": {
+                        "headline": "Rule of Tar-Aldarion, sixth king of Númenor",
+                    }
+                },
+                {
+                    "start_date": {
+                        "year": "883"
+                    },
+                    "end_date": {
+                        "year": "1075"
+                    },
+                    "text": {
+                        "headline": "Rule of Tar-Aldarion, sixth king of Númenor",
+                    }
+                },
+                {
+                    "start_date": {
+                        "year": "1075"
+                    },
+                    "end_date": {
+                        "year": "1280"
+                    },
+                    "text": {
+                        "headline": "Rule of Tar-Ancalimë, seventh ruler of Númenor, and first ruling",
+                    }
+                },
+                {
+                    "start_date": {
+                        "year": "1280"
+                    },
+                    "end_date": {
+                        "year": "1394"
+                    },
+                    "text": {
+                        "headline": "Rule of Tar-Anárion, eigth ruler of Númenor",
+                    }
+                },
+                {
+                    "start_date": {
+                        "year": "1394"
+                    },
+                    "end_date": {
+                        "year": "1556"
+                    },
+                    "text": {
+                        "headline": "Rule of Tar-Súrion, ninth ruler of Númenor",
+                    }
+                },
+                {
+                    "start_date": {
+                        "year": "1556"
+                    },
+                    "end_date": {
+                        "year": "1731"
+                    },
+                    "text": {
+                        "headline": "Rule of Tar-Telperiën, tenth ruler of Númenor",
+                    }
+                },
+                {
+                    "start_date": {
+                        "year": "1731"
+                    },
+                    "end_date": {
+                        "year": "1869"
+                    },
+                    "text": {
+                        "headline": "Rule of Tar-Minastir, eleventh ruler of Númenor",
+                    }
+                },
+                {
+                    "start_date": {
+                        "year": "1869"
+                    },
+                    "end_date": {
+                        "year": "2029"
+                    },
+                    "text": {
+                        "headline": "Rule of Tar-Ciryatan, twelfth ruler of Númenor",
+                    }
+                },
+                {
+                    "start_date": {
+                        "year": "2029"
+                    },
+                    "end_date": {
+                        "year": "2221"
+                    },
+                    "text": {
+                        "headline": "Rule of Tar-Atanamir, thirteenth ruler of Númenor",
+                    }
+                },
+                {
+                    "start_date": {
+                        "year": "2221"
+                    },
+                    "end_date": {
+                        "year": "2386"
+                    },
+                    "text": {
+                        "headline": "Rule of Tar-Ancalimon, fourteenth ruler of Númenor",
+                    }
+                },
+                {
+                    "start_date": {
+                        "year": "2386"
+                    },
+                    "end_date": {
+                        "year": "2526"
+                    },
+                    "text": {
+                        "headline": "Rule of Tar-Telemmaitë, fifteenth ruler of Númenor",
+                    }
+                },
+                {
+                    "start_date": {
+                        "year": "2526"
+                    },
+                    "end_date": {
+                        "year": "2637"
+                    },
+                    "text": {
+                        "headline": "Rule of Tar-Vanimeldë, sixteenth ruler of Númenor",
+                    }
+                },
+                {
+                    "start_date": {
+                        "year": "2637"
+                    },
+                    "end_date": {
+                        "year": "2657"
+                    },
+                    "text": {
+                        "headline": "Rule of Tar-Anducal, illegal ruler of Númenor",
                     }
                 }
             ]
+        }
+
+        const options = {
+            hash_bookmark: true,
+            initial_zoom: 3,
+            timenav_height_percentage: 50,
+            marker_padding: 5,
+            timenav_position: "top"
         }
 
         // The TL.Timeline constructor takes at least two arguments:
         // 1. the id of the Timeline container (no '#'), and
         // 2. the URL to your JSON data file or Google spreadsheet.
         // the id must refer to an element above this code, and the element must have CSS styling to give it width and height. Optionally, a third argument with configuration options can be passed.
-        timeline = new TL.Timeline('timeline-embed', timeline_json);
+        timeline = new TL.Timeline('timeline-embed', timeline_json, options);
     </script>
+
+    <style>
+        .tl-timeaxis-background, .tl-timeaxis, .tl-timeera {
+            height: 50px;
+        }
+    </style>
 </body>
 
 </html>
