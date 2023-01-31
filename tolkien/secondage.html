@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second Age Timeline</title>
+    <!-- Import Timeline CSS -->
+    <link title="timeline-styles" rel="stylesheet"
+        href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
+    <!-- Import Timeline JS -->
+    <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
+</head>
+
+<body>
+    <div id='timeline-embed' style="width: 100%; height: 600px"></div>
+    <!-- Create a timeline -->
+    <script type="text/javascript">
+        // JSON
+        const timeline_json = {
+            "title": {
+                "text": {
+                    "headline": "The Second Age of Middle-Earth"
+                }
+            },
+            "events": [
+                {
+                    "start_date": {
+                        "year": "-6"
+                    },
+                    "end_date": {
+                        "year": "442"
+                    },
+                    "text": {
+                        "headline": "Elros Tar-Minyatur",
+                        "text": "<p>First king of Númenor</p>"
+                    }
+                },
+                {
+                    "start_date": {
+                        "year": "61"
+                    },
+                    "end_date": {
+                        "year": "471"
+                    },
+                    "text": {
+                        "headline": "Vardamir",
+                        "text": "<p>Second king of Númenor</p>"
+                    }
+                },
+                {
+                    "start_date": {
+                        "year": "192"
+                    },
+                    "end_date": {
+                        "year": "603"
+                    },
+                    "text": {
+                        "headline": "Amandil",
+                        "text": "<p>Third king of Númenor</p>"
+                    }
+                },
+            ],
+            "eras": [
+                {
+                    "start_date": {
+                        "year": "32"
+                    },
+                    "end_date": {
+                        "year": "442"
+                    },
+                    "text": {
+                        "text": "Rule of Elros Tar-Minyatur, First king of Númenor",
+                    }
+
+                }
+            ]
+        }
+
+        // The TL.Timeline constructor takes at least two arguments:
+        // 1. the id of the Timeline container (no '#'), and
+        // 2. the URL to your JSON data file or Google spreadsheet.
+        // the id must refer to an element above this code, and the element must have CSS styling to give it width and height. Optionally, a third argument with configuration options can be passed.
+        timeline = new TL.Timeline('timeline-embed', timeline_json);
+    </script>
+</body>
+
+</html>
