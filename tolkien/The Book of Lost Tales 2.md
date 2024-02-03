@@ -14,7 +14,7 @@
 2. **Reading Two - Chapter 2: Turambar and the Foalókë**, the original version of the Children of Húrin.
     * February 25, 2024
 3. **Reading Three — Chapter 3: The Fall of Gondolin**
-    * March 3, 2024
+    * March 10, 2024
 4. **Reading Four - Chapter 4: The Nauglafring**
     * March 17, 2024
 5. **Reading Five - Chapters 5 and 6**, covering both The Tale of Eärendil and The History of Eriol or Æfwine.
